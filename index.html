@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="rpsapp">
   <head>
+	<!-- Page info -->
     <title>Rock Paper Scissors</title>
+	
+	<!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	
+	<!-- App Scripts -->
 	<script src="app.module.js"></script>
 	<script src="app.config.js"></script>
 	
+	<!-- Components -->
 	<script src="account-add/account-add.js"></script>
 	<script src="account-login/account-login.js"></script>
 	<script src="room-creation/room-creation.js"></script>
 	<script src="game/game.js"></script>
 	<script src="rps/rps.js"></script>
 	
+	<!-- Styles -->
+	<link rel="stylesheet" href="rps.css"/>
+	
 	
   </head>
 
   <body>
+  <div ng-view>
+  </div>
   </body>
 </html>
