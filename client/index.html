@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<!-- Page info -->
+	<meta charset="utf8">
+    <title>Rock Paper Scissors</title>
+
+	<!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+	<!-- App Scripts -->
+	<!-- <script src="app.module.js"></script>
+	<script src="app.config.js"></script> -->
+
+	<!-- Components
+	<script src="room-creation/room-creation.js"></script>
+	<script src="game/game.js"></script>
+	<script src="rps/rps.js"></script> -->
+
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="rps.css"/>
+  </head>
+
+  <body>
+  <div>
+    <ul id="chat_messages">
+    </ul>
+  </div>
+  <div>
+
+  <form id="chat-form">
+  <input id="chat">
+  <button id="say">Send Message</button>
+  </form>
+
+	<button id="rock" class="turn">Rock</button>
+	<button id="paper" class="turn">Paper</button>
+	<button id="scissors" class="turn">Scissors</button>
+
+  </div>
+  <script src="client.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <div ng-view>
+  </div>
+  </body>
+</html>
