@@ -11,8 +11,9 @@ $(document).ready(function(){
   function onFormSubmitted(e)
   {
     e.preventDefault();
-    var textMessage = $('#chat').value;
-    $('#chat').value = '';
+    var textMessage = $('#chat').val();
+    $('#chat').val(" ");
+	console.log(textMessage);
 
     sock.emit('message', textMessage);
   }
