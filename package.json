@@ -16,7 +16,7 @@
     "nodemon": "^2.0.2"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha -ui tdd test-rps",
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
