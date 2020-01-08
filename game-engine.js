@@ -3,7 +3,11 @@ class RPS
   constructor(p1, p2)
   {
     var players = [p1, p2];
-    const turns = [null, null];
+    var turns = [null, null];
+	//var p1Wins = 0;
+	//var p2Wins = 0;
+	//var p1Loss = 0;
+	//var p2Loss = 0;
 
     function sendToPlayer(playerIndex, msg)
     {
@@ -31,7 +35,7 @@ class RPS
       const _turns = turns;
       if(_turns[0] && _turns[1])
       {
-        sendToPlayers("Game Over");
+        sendToPlayers(turns[0] + " : " + turns[1]);
         getGameResult();
         sendToPlayers("Next Round");
         turns = [null, null];
@@ -40,11 +44,8 @@ class RPS
 
     function getGameResult()
     {
-        console.log(turns[0]);
-        console.log(turns[1]);
-
-        var p0 = decodeTurn(turns[0]);
-        var p1 = decodeTurn(turns[1]);
+        var p0 = calculateTurn(turns[0]);
+        var p1 = calculateTurn(turns[1]);
 
         var dist = (p1-p0 + 3) % 3;
 
@@ -55,9 +56,13 @@ class RPS
             break;
           case 1:
             sendWinMsg(players[0], players[1]);
+			//p1Wins += 1;
+			//p2Loss += 1;
             break;
           case 2:
             sendWinMsg(players[1], players[0]);
+			//p1Loss += 1;
+			//p2Loss += 1;
             break;
         }
     }
@@ -68,7 +73,7 @@ class RPS
       loser.emit('message', "You lost!");
     }
 
-    function decodeTurn(turn)
+    function calculateTurn(turn)
     {
       switch (turn)
       {

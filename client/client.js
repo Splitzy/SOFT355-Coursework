@@ -1,7 +1,9 @@
 $(document).ready(function(){
   function writeEvent(text){
     $("#chat_messages").append("<li>" + text + "</li>");
+	$("#chat_messages").scrollTop = $("#chat_messages").scrollHeight;
   }
+ 
 
   writeEvent("Welcome to RPS! Please select a button to begin");
 
