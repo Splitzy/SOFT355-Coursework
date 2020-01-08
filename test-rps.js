@@ -1,5 +1,5 @@
 var chai = require("chai");
-var rpsGame = require("../game-engine");
+var rpsGame = require("game-engine");
 var turns = rpsGame.turns;
 
 suite("Test the game logic", function() {
