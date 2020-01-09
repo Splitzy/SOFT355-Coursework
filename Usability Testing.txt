@@ -1,0 +1,23 @@
+User 1:
+What did you like about the product?
+"It's pretty good! It works, it seems pretty robust (you can change your option and it uses whatever you last chose, so that's good)"
+
+What didn't you like about the project/what would you improve?
+"The wins/losses thing doesn't seem to do anything though, and I don't exactly know how you'd fix this but once you start moving past the limit of the text box and it starts scrolling
+you have to scroll each time to see what the next result is. 
+If you have a way of identifying who's player 1 and 2, I would add a little "Player <x>:" next to their chat so you can work out who sent what"
+
+User 2:
+What did you like about the product?
+"it’s very simple n easy to use"
+
+What didn't you like about the project/what would you improve?
+"Maybe like an indication of player 1 or player 2 and it says who sent what on the chat"
+
+User 3:
+What did you like about the product?
+"it seems to work, draws work and winning and losing messages seem correct"
+
+What didn't you like about the project/what would you improve?
+"The wins and losses score tracker doesnt work and the chat window doesnt scroll automatically when the chat updates.
+Not having the game rely only on the textbox to convey information would be great too"

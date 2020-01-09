@@ -1,23 +1,23 @@
 $(document).ready(function(){
   function writeEvent(text){
     $("#chat_messages").append("<li>" + text + "</li>");
-	$("#chat_messages").scrollTop = $("#chat_messages").scrollHeight;
+	 $("#chat_messages").scrollTop($("#chat_messages").prop("scrollHeight") - $("#chat_messages").prop("clientHeight"));
   }
- 
+  var name = prompt("What's your name?");
 
   writeEvent("Welcome to RPS! Please select a button to begin");
 
   var sock = io();
+  sock.emit('message', name + " has connected");
   sock.on('message', writeEvent);
+  
 
   function onFormSubmitted(e)
   {
     e.preventDefault();
     var textMessage = $('#chat').val();
     $('#chat').val(" ");
-	console.log(textMessage);
-
-    sock.emit('message', textMessage);
+    sock.emit('message', name + ": " + textMessage);
   }
 
   function addButtonListeners()
